@@ -9,6 +9,19 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(() => {
-    // your code here
-})();
+// Acceder aux boutons via leur ID
+let redButton = document.getElementById('red');
+let greenButton = document.getElementById('green');
+let yellowButton = document.getElementById('yellow');
+let blueButton = document.getElementById('blue');
+
+// fonction qui change le fond
+function changeBackgroundColor(color) {
+    document.body.style.backgroundColor = color;  
+}
+
+// Acceder aux écouteurs.
+redButton.addEventListener('click', () => changeBackgroundColor('red'));
+greenButton.addEventListener('click', () => changeBackgroundColor('green'));
+yellowButton.addEventListener('click', () => changeBackgroundColor('yellow'));
+blueButton.addEventListener('click', () => changeBackgroundColor('blue'));
