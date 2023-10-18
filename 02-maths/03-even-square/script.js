@@ -9,8 +9,17 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(() => {
-    document.getElementById("run").addEventListener("click", () => {
-        // your code here
-    });
-})();
+document.getElementById('run').addEventListener('click', calculateSquares);
+
+function calculateSquares() {
+    let resultText = '';
+
+    for (let i = 1; i <= 21; i++) {
+        if (i % 2 == 0) {
+            let square = i * i;
+            resultText += i + ' squared is ' + square + '\n';
+        }
+    }
+
+    alert(resultText);
+}

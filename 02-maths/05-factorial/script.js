@@ -9,10 +9,19 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(() => {
-    // to get the value of an input: document.getElementById("element-id").value
+function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
 
-    document.getElementById("run").addEventListener("click", () => {
-        // your code here
-    });
-})();
+document.getElementById("run").addEventListener("click", () => {
+    const number = parseFloat(document.getElementById("number").value);
+    if (!isNaN(number) && number >= 0) {
+        const result = factorial(number);
+        alert(result);  // ou alert(result);
+    } else {
+        alert("Veuillez entrer un nombre positif.");
+    }
+});
