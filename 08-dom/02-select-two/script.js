@@ -10,5 +10,12 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let targetElement = document.getElementsByClassName('target');
+    targetElement[0].innerText = "Owned";
 })();
+
+// ALTERNATIVE ( POUR LE 3EME EXERCICE)
+// (() => {
+//     let targetElement = document.querySelector('.target');
+//     targetElement.innerText = "Owned";
+// })();

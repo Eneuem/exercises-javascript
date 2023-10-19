@@ -10,5 +10,19 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    // Étape 1: Récupérez la valeur de l'attribut data-image
+    let imageUrl = document.getElementById('source').getAttribute('data-image');
+    
+    // Étape 2: Créez une nouvelle balise img
+    let newImage = document.createElement('img');
+    
+    // Étape 3: Attribuez la valeur de l'attribut data-image à l'attribut src de la nouvelle balise img
+    newImage.src = imageUrl;
+    
+    // Étape 4: Insérez la nouvelle balise img dans la balise avec l'id target
+    document.getElementById('target').appendChild(newImage);
+    
+    // Étape 5: Supprimez la balise avec l'id source
+    document.getElementById('source').remove();
 })();
+
