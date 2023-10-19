@@ -9,7 +9,22 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(() => {
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
-    // your code here
-})();
+function updateGreeting() {
+    let currentDate = new Date();
+    let hour = currentDate.getHours();
+    let greetingText;
+
+    if (hour >= 18) {
+        greetingText = "Bonsoir";
+    } else {
+        greetingText = "Bonjour";
+    }
+
+    // Sélectionnez la balise HTML et modifiez son texte
+    let messageElement = document.getElementById('target');
+    messageElement.innerText = greetingText;
+}
+
+// Appelez la fonction updateGreeting pour mettre à jour le texte de la balise
+updateGreeting();
+
