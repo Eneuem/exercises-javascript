@@ -9,6 +9,10 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+// Dans script.js
+
+let fourthElement;  // Déplacez la déclaration de la variable ici
+
 (() => {
     const fruits = [
         "pomme",
@@ -25,5 +29,12 @@
         "cerise",
     ];
 
-    // your code here
+    fourthElement = fruits[3];  // Affectez la valeur ici
 })();
+
+const button = document.getElementById('run');
+
+button.addEventListener('click', () => {
+    console.log(fourthElement);  // Maintenant, cela devrait fonctionner
+});
+

@@ -88,5 +88,18 @@
         },
     ];
 
-    // your code here
+    let button = document.getElementById('run');
+
+    button.addEventListener('click', () => {
+        let adults = [];
+        for (let i = 0; i < people.length; i++) 
+        {
+            let ppl = people[i];
+            if (ppl.age > 18)
+            {
+                adults.push(ppl);
+            }
+        }
+        console.log(adults);
+    })
 })();

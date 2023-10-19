@@ -25,5 +25,12 @@
         "cerise",
     ];
 
-    // your code here
+    const button = document.getElementById('run'); 
+
+    button.addEventListener('click', () => {
+        for (let i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
+        }
+    });
 })();
+

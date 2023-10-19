@@ -88,5 +88,17 @@
         },
     ];
 
-    // your code here
+    let button = document.getElementById('run');
+
+    button.addEventListener('click', () => {
+        for (let i = 0; i < people.length; i++) 
+        {
+            let ppl = people[i];
+            if (ppl.firstname === "Jean" && ppl.lastname === "Dupont")
+            {
+                alert(ppl.email);
+                alert(i);
+            }
+        }
+    })
 })();

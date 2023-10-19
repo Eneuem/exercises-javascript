@@ -25,5 +25,43 @@
         "cerise",
     ];
 
-    // your code here
+    
+    let button = document.getElementById('run');
+
+    button.addEventListener('click', () => {
+        for (let i = 0; i < fruits.length; i++)
+        {
+            if (fruits[i] === "pomme")
+            {
+                console.log("yes");
+                break;
+            }
+        }
+    })
 })();
+
+// PLUS LONG AVEC BOOLEEN, MERCI CHAT GPT
+
+// let button = document.getElementById('run');
+
+// button.addEventListener('click', () => {
+//     let isAppleFound = false;  // Initialisation d'une variable booléenne à false
+
+//     for (let i = 0; i < fruits.length; i++)
+//     {
+//         if (fruits[i] === "pomme")
+//         {
+//             isAppleFound = true;  // Mise à jour de la variable booléenne à true si "pomme" est trouvé
+//             break;  // Arrêt de la boucle dès que "pomme" est trouvé
+//         }
+//     }
+
+//     if (isAppleFound)  // Vérification de la variable booléenne après la boucle
+//     {
+//         console.log("yes");
+//     }
+//     else
+//     {
+//         console.log("no");
+//     }
+// });

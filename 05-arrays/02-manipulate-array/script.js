@@ -8,13 +8,16 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
+let fruits;
 
-(() => {
-    const fruits = [
+(() => {    
+    fruits = [
         "pomme",
         "poire",
         "fraise",
         "tomate",
+        "kiwi",
+        "banane",
         "orange",
         "mandarine",
         "durian",
@@ -23,5 +26,15 @@
         "cerise",
     ];
 
-    // your code here
+    fruits[0] = "banane";
+    fruits[11] = "kiwi";
+
 })();
+
+const button = document.getElementById('run');
+
+button.addEventListener('click', () => {
+    alert(fruits);  // Maintenant, cela devrait fonctionner
+});
+
+ 
