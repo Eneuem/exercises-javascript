@@ -27,5 +27,15 @@
         "cerise",
     ];
 
-    // your code here
+    let button = document.getElementById('run');
+
+    button.addEventListener('click', () => {
+        let uniqueFruits = fruits.reduce((temp, fruit) => {
+            if (!temp.includes(fruit)) {
+                temp.push(fruit);
+            }
+            return temp;
+        }, []); 
+        console.log(uniqueFruits);
+    });
 })();

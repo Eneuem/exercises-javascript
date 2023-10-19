@@ -26,5 +26,15 @@
         os: "linux",
         user: null,
     };
-    // your code here
+
+    document.getElementById('run').addEventListener('click', () => {
+        let updatedComputers = computers.map(computer => {
+            return {
+                ...defaultProps,  // Ceci appliquera les propriétés par défaut
+                ...computer,      // Ceci écrasera les valeurs par défaut avec les valeurs existantes du computer
+            };
+        });
+        
+        console.log(updatedComputers);
+    });
 })();

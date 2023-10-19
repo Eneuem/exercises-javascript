@@ -88,5 +88,10 @@
         },
     ];
 
-    // your code here
+    let button = document.getElementById('run');
+
+    button.addEventListener('click', () => {
+        let totalAge = people.reduce((sum, ppl) => sum + ppl.age, 0);
+        alert(totalAge);
+    })
 })();

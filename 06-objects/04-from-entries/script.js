@@ -12,5 +12,13 @@
 (() => {
     const keys = ["name", "species", "age", "gender", "color"];
     const values = ["Skitty", "cat", 9, "female", "tabby"];
-    // your code here
+    
+    document.getElementById('run').addEventListener('click', () => {
+        let tab1 = Object.fromEntries(keys);
+        let tab2 = Object.fromEntries(values);
+
+        alert(tab1);
+        alert(tab2);
+
+    })
 })();

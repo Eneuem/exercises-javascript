@@ -9,6 +9,13 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(() => {
-    // your code here
-})();
+document.getElementById('run').addEventListener('click', () => {
+    const person = {
+        lastname: 'Chelbat',
+        firstname: 'Naim',
+        age: 34,
+        city: 'Bruxelles',
+        country: 'Belgique'
+    };
+    console.log(person);
+});
