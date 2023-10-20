@@ -18,5 +18,18 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+    // Sélectionnez l'élément button avec l'ID "next" et l'élément img
+    let button = document.getElementById('next');
+    let imgElement = document.querySelector('img');
+
+    // Initialisez un indice pour suivre l'image actuelle
+    let currentIndex = 0;
+
+    // Ajoutez un écouteur d'événements au bouton pour détecter les clics
+    button.addEventListener('click', () => {
+        // Incrémentez l'indice pour passer à l'image suivante
+        currentIndex = (currentIndex + 1) % gallery.length;
+        // Changez la source de l'élément img à la prochaine image dans le tableau gallery
+        imgElement.setAttribute('src', gallery[currentIndex]);
+    });
 })();

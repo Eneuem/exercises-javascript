@@ -10,5 +10,23 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+
+let slider = document.getElementById("slider");
+let output = document.getElementById("target");
+
+function updateOutput(value) { let strValue = String(value);
+
+if (strValue.charAt(0) !== '0') {
+
+    strValue = '0' + strValue;
+}
+output.innerHTML = '+' + strValue;
+}
+
+updateOutput(slider.value);
+
+slider.oninput = function() {
+updateOutput(this.value);
+} 
 })();
